@@ -13,5 +13,5 @@ A round of 5 sessions will be created to select the ultimate winner
 **Part 3**
 The various functions will be put together to create the whole game
 
-**Part 5**
+**Part 4**
 When everything is done a user interface will be created for the game
