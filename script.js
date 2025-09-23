@@ -3,23 +3,25 @@ const rock = "rock";
 const paper = "paper";
 const scissors = "scissors";
 
-let computerChoice;
-const userChoice = prompt("Enter Choice: Rock, Paper or scissors");
 
-function computerSELECTION () {
-    let choice = Math.floor(Math.random() * 3) + 1;
-    if (choice === 1){
-        computerChoice = "rock";
-    } else if (choice === 2) {
-        computerChoice = "paper";
-    } else {
-        computerChoice = "scissors"
-    }
-    console.log(`${computerChoice} is COMPUTER SELECTION`)
-    return computerChoice;
+const humanChoice = function humanchoice() {
+    return prompt("Enter Choice: Rock, Paper or scissors");
 }
 
-function gameRound(pc, user) {
+const computerChoice = function computerchoice() {
+    let choice = Math.floor(Math.random() * 3) + 1;
+    if (choice === 1) {
+        computer = "rock";
+    } else if (choice === 2) {
+        computer = "paper";
+    } else {
+        computer = "scissors"
+    }
+    console.log(`${computer} is COMPUTER SELECTION`)
+    return computer;
+}
+
+function playRound(pc, user) {
     let win;
     if (pc === rock && user === paper) {
         win = paper;
@@ -41,7 +43,16 @@ function gameRound(pc, user) {
     console.log(`User selected, ${user}`);
     console.log(`${win}, is the winning option`);
     return win;
-} 
+}
 
-computerSELECTION();
-gameRound(computerChoice, userChoice)
+
+
+function playGame() {
+    let session = 0;
+    while (session < 5) {
+        playRound(computerChoice(), humanChoice());
+        session++;
+    }
+}
+
+ playGame();
