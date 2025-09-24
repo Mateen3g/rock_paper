@@ -1,5 +1,10 @@
 # rock_paper
 Making a simple rock, paper, sicssors game
+    The computer has to make a choice between 3 options, rock, paper and scissors.
+    Then the user will also select an option between the 3 
+    Both computer and use selection will be pared an a win is selected from the session
+    A 1pt score will be assigned to the winner of the session
+    There will be 5 sessions in one game round  
 
 **Part 1**
 A prompt will be used to take user option
