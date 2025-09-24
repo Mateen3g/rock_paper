@@ -17,7 +17,8 @@ const scissors = "scissors";
 
 // Variable to hold human choice
 const humanChoice = function humanchoice() {
-    return prompt("Enter Choice: Rock, Paper or scissors");
+    let choice = prompt("Enter Choice: Rock, Paper or scissors");
+    return choice.toLowerCase()
 }
 
 // Variable to hold computer choice
