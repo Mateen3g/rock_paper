@@ -52,7 +52,9 @@ function playRound(pc, user) {
     let score = `Human-Score=${humanScore} |---| Computer-Score=${computerScore}`;
 
     // Paring options and selecting a winning option
-    if (pc === rock && user === paper) {
+    if (pc === user) {
+        win = "This is a tie"
+    } else if (pc === rock && user === paper) {
         win = paper;
         if (win === pc) {
             computerScore += 1;
@@ -94,13 +96,10 @@ function playRound(pc, user) {
         } else {
             humanScore += 1;
         };
-    } else {
-        win = "This is a draw round go again"
     }
-
     console.log(`Computer selected, ${pc}`);
     console.log(`User selected, ${user}`);
-    console.log(`${win}, is the winning option`);
+    console.log(`${win} wins this round`);
     console.log(score);
     return win;
 }
